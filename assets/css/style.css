@@ -1,0 +1,120 @@
+body {
+    background-color: peachpuff;
+}
+
+.gameOuterContainer {
+    width: 700px;
+    height: 800px;
+
+    background-color: lightgrey;
+
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-350px, 0px);
+}
+
+.gameInstructionsContainer {
+    width: 300px;
+    height: 100px;
+
+    background-color: grey;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.gameInnerContainer {
+    width: 700px;
+    height: 600px;
+
+    background-color: grey;
+
+    position: absolute;
+    top: 140px;
+    left: 20px;
+}
+
+.computerScoreContainer {
+    width: 100px;
+    height: 100px;
+
+    margin: 10px;
+
+    background-color: cyan;
+}
+
+.userTotalScoreContainer {
+    width: 100px;
+    height: 100px;
+
+    margin: 10px;
+    
+    background-color: lightgreen;
+}
+
+.gemImagesContainer {
+}
+
+    .gem1Container {
+        margin: 10px;
+
+        float: left;
+    }
+
+    .gem2Container {
+        margin: 10px;
+
+        float: left;
+    }
+
+    .gem3Container {
+        margin: 10px;
+
+        float: left;
+    }
+
+    .gem4Container {
+        margin: 10px;
+
+        float: left;
+    }
+
+.youWinYouLoseContainer {
+    width: 100px;
+    height: 100px;
+    
+    background-color: lightcoral;
+
+    position: relative;
+    top: 10px;
+}
+
+.userTotalWinContainer {
+    width: 100px;
+    height: 100px;
+    
+    background-color: yellow;
+}
+
+.userTotalLossContainer {
+    width: 100px;
+    height: 100px;
+    
+    background-color: lightsalmon;
+}
+
+.playNextGameButton {
+    width: 150px;
+    height: 30px;
+    
+    background-color: lightyellow;
+}
+
+.resetGameButton {
+    width: 150px;
+    height: 30px;
+    
+    background-color: lightseagreen;
+}
