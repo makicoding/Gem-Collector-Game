@@ -66,7 +66,14 @@ var userTotalLosses = 0;
 // ----------------------------------------
 
 // Function for a new game
+var newGame = function() {
 
+    // Reset game
+    // (by doing the following, you don't need to use a function to reload browser)
+    counter = 0;
+    $("img").remove();
+    $(".gemImage").remove();
+    $(".imagesForGemsContainer").empty();
 
 
     // Write game instructions to container
@@ -74,6 +81,7 @@ var userTotalLosses = 0;
 
         // The above rewritten in JavaScript would be:
         // document.getElementsByClassName("gameInstructionsContainer")[0].innerHTML = gameInstructions
+
 
     // Write computer score to container 
     $(".computerScoreContainer").html("Computer score: " + scoreForComputer);
@@ -98,12 +106,14 @@ var userTotalLosses = 0;
 
     }
 
+    singleGame();
 
+}
 
 
 // ----------------------------------------
 // Function for a single game
-
+var singleGame = function() {
 
     // Click event applies to every gem image on the page
     $(".gemImage").on("click", function() {
@@ -142,3 +152,4 @@ var userTotalLosses = 0;
 
     });
 
+}
