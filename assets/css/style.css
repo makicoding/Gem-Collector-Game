@@ -3,7 +3,7 @@ body {
 }
 
 .gameOuterContainer {
-    width: 700px;
+    width: 800px;
     height: 800px;
 
     background-color: lightgrey;
@@ -11,7 +11,7 @@ body {
     position: fixed;
     top: 10px;
     left: 50%;
-    transform: translate(-350px, 0px);
+    transform: translate(-400px, 0px);
 }
 
 .gameInstructionsContainer {
@@ -26,7 +26,7 @@ body {
 }
 
 .gameInnerContainer {
-    width: 700px;
+    width: 760px;
     height: 600px;
 
     background-color: grey;
@@ -38,7 +38,7 @@ body {
 
 .computerScoreContainer {
     width: 100px;
-    height: 100px;
+    height: 60px;
 
     margin: 10px;
 
@@ -47,74 +47,50 @@ body {
 
 .userTotalScoreContainer {
     width: 100px;
-    height: 100px;
+    height: 60px;
 
     margin: 10px;
     
     background-color: lightgreen;
 }
 
-.gemImagesContainer {
-}
-
-    .gem1Container {
-        margin: 10px;
-
-        float: left;
-    }
-
-    .gem2Container {
-        margin: 10px;
-
-        float: left;
-    }
-
-    .gem3Container {
-        margin: 10px;
-
-        float: left;
-    }
-
-    .gem4Container {
-        margin: 10px;
-
-        float: left;
-    }
-
 .youWinYouLoseContainer {
     width: 100px;
-    height: 100px;
+    height: 60px;
+
+    margin: 10px;
     
     background-color: lightcoral;
-
-    position: relative;
-    top: 10px;
 }
 
-.userTotalWinContainer {
+.userWinContainer {
     width: 100px;
-    height: 100px;
+    height: 60px;
+
+    margin: 10px;
     
     background-color: yellow;
 }
 
-.userTotalLossContainer {
+.userLossContainer {
     width: 100px;
-    height: 100px;
+    height: 60px;
+
+    margin: 10px;
     
     background-color: lightsalmon;
-}
-
-.playNextGameButton {
-    width: 150px;
-    height: 30px;
-    
-    background-color: lightyellow;
 }
 
 .resetGameButton {
     width: 150px;
     height: 30px;
+
+    margin: 10px;
+
+    cursor: pointer;
     
     background-color: lightseagreen;
+}
+
+.imagesForGemsContainer {
 }
