@@ -81,7 +81,15 @@ body {
     background-color: lightsalmon;
 }
 
-.resetGameButton {
+.imagesForGemsContainer {
+    margin: 10px;
+}
+
+.gemImage {
+    margin: 10px;
+}
+
+.reloadBrowserButton {
     width: 150px;
     height: 30px;
 
@@ -90,7 +98,4 @@ body {
     cursor: pointer;
     
     background-color: lightseagreen;
-}
-
-.imagesForGemsContainer {
 }

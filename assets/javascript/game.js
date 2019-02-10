@@ -41,6 +41,8 @@
 
 var gameInstructions = "these are the game instructions"
 
+var scoreForComputer;
+
 // Array that holds the paths to the images
 var gemImageSource = [4];
 gemImageSource [0] = "https://via.placeholder.com/150";
@@ -48,14 +50,8 @@ gemImageSource [1] = "https://via.placeholder.com/150";
 gemImageSource [2] = "https://via.placeholder.com/150";
 gemImageSource [3] = "https://via.placeholder.com/150";
 
-var scoreForComputer  =  Math.floor(Math.random() * 120) + 19;     // Score should be between 19-120
-var scoreForGem1 = Math.floor(Math.random() * 12) + 1;      // Score should be between 1-12
-var scoreForGem2 = Math.floor(Math.random() * 12) + 1;
-var scoreForGem3 = Math.floor(Math.random() * 12) + 1;
-var scoreForGem4 = Math.floor(Math.random() * 12) + 1;
-
 // Array that holds the different score options for the gems
-var scoreOptionsForGems = [scoreForGem1, scoreForGem2, scoreForGem3, scoreForGem4];
+var scoreOptionsForGems = [];
 
 var counter = 0;
 
@@ -83,6 +79,8 @@ var newGame = function() {
         // document.getElementsByClassName("gameInstructionsContainer")[0].innerHTML = gameInstructions
 
 
+    // Generate random number for computer score    
+    scoreForComputer  =  Math.floor(Math.random() * 120) + 19;     // Score should be between 19-120
     // Write computer score to container 
     $(".computerScoreContainer").html("Computer score: " + scoreForComputer);
 
@@ -90,13 +88,16 @@ var newGame = function() {
     // Write user wins to container
     $(".userWinContainer").html("Wins: " + userTotalWins);
     // Write user loss to container
-    $(".userLossContainer").html("Losses: " + userTotalWins);
+    $(".userLossContainer").html("Losses: " + userTotalLosses);
 
 
     // "for loop" to cycle through each element in the scoreOptionsForGems array
     // and assign image tag, class, and image source to each of them.
     // The same image will be assigned to each image if using a for loop.
-    for (var i = 0; i < scoreOptionsForGems.length; i++) {
+    for (var i = 0; i < 4; i++) {
+
+        // Generate random number for gems in the scoreOptionsForGems array
+        scoreOptionsForGems[i] = Math.floor(Math.random() * 12) + 1;      // Score should be between 1-12
 
         var imageForGem = $("<img>");
         imageForGem.addClass("gemImage");     // Class assigned for CSS styling
@@ -134,22 +135,35 @@ var singleGame = function() {
 
         if (counter === scoreForComputer) {
             $(".youWinYouLoseContainer").html("You win!");
-            userTotalWins++;    // userTotalWins goes up by 1
+            // userTotalWins goes up by 1
+            userTotalWins++;    
             $(".userWinContainer").html("Wins: " + userTotalWins);
-        
             // Function to call for a new game
-
+            newGame();
         }
 
-        else if (counter >= scoreForComputer) {
+        else if (counter > scoreForComputer) {
             $(".youWinYouLoseContainer").html("You lose!");
-            userTotalLosses++;    // userTotalLosses goes up by 1    
+            // userTotalLosses goes up by 1    
+            userTotalLosses++;    
             $(".userLossContainer").html("Losses: " + userTotalLosses);
-
             // Function to call for a new game
-
+            newGame();
         }
 
     });
 
 }
+
+
+// When user clicks reloadBrowserButton, page reloads
+function onClickReload() {
+    location.reload();
+}
+
+
+// The following is crucial to have.  It is saying that
+// when the ENTIRE document is ready, then the function newGame will execute
+$(document).ready(function() {
+    newGame();
+})
