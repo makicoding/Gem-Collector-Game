@@ -1,88 +1,123 @@
 body {
-    background-color: peachpuff;
+    background-color: #0e3560;
+}
+
+.backgroundImage {
+    width: 100%;
+
+    position: fixed;
+    top: -40px;
 }
 
 .gameOuterContainer {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
 
-    background-color: lightgrey;
+    border-radius: 10px;
+
+    background-color: #0e3560;
+
+    opacity: 0.9;
 
     position: fixed;
-    top: 10px;
+    top: 20px;
     left: 50%;
-    transform: translate(-400px, 0px);
+    transform: translate(-350px, 0px);
+}
+
+.gameTitleContainer {
+    color: gold;
+    text-align: center;
+
+    position: relative;
+    top: 15px;
 }
 
 .gameInstructionsContainer {
-    width: 300px;
-    height: 100px;
+    width: 700px;
+    height: 310px;
 
-    background-color: grey;
+    padding: 0px 20px 0px 20px;
 
-    position: absolute;
+    color: white;
+
+    position: relative;
     top: 20px;
-    left: 20px;
 }
 
 .gameInnerContainer {
     width: 760px;
     height: 600px;
 
-    background-color: grey;
+    border-radius: 10px;
+
+    background-color: white;
 
     position: absolute;
-    top: 140px;
+    top: 340px;
     left: 20px;
 }
 
 .computerScoreContainer {
-    width: 100px;
-    height: 60px;
+    width: 180px;
+    height: 30px;
 
+    padding: 3px 0px 0px 8px;
     margin: 10px;
 
-    background-color: cyan;
+    color: black;
+    background-color: gold;
 }
 
 .userTotalScoreContainer {
-    width: 100px;
-    height: 60px;
+    width: 180px;
+    height: 30px;
 
+    padding: 3px 0px 0px 8px;
     margin: 10px;
     
-    background-color: lightgreen;
+    color: black;
+    background-color: gold;
 }
 
 .youWinYouLoseContainer {
-    width: 100px;
-    height: 60px;
+    width: 180px;
+    height: 30px;
 
+    padding: 3px 0px 0px 8px;
     margin: 10px;
     
-    background-color: lightcoral;
+    color: white;
+    background-color: #0e3560;
 }
 
 .userWinContainer {
-    width: 100px;
-    height: 60px;
+    width: 180px;
+    height: 30px;
 
+    padding: 3px 0px 0px 8px;
     margin: 10px;
     
-    background-color: yellow;
+    color: white;
+    background-color: salmon;
 }
 
 .userLossContainer {
-    width: 100px;
-    height: 60px;
+    width: 180px;
+    height: 30px;
 
+    padding: 3px 0px 0px 8px;
     margin: 10px;
     
-    background-color: lightsalmon;
+    color: white;
+    background-color: salmon;
 }
 
 .imagesForGemsContainer {
     margin: 10px;
+
+    cursor: pointer;
+    outline: 0;
 }
 
 .gemImage {
@@ -90,12 +125,18 @@ body {
 }
 
 .reloadBrowserButton {
-    width: 150px;
+    width: 240px;
     height: 30px;
 
+    border: 0;
     margin: 10px;
+
+    color: white;
+    background-color: #0e3560;
+    text-align: center;
 
     cursor: pointer;
     
-    background-color: lightseagreen;
 }
+
+.reloadBrowserButton:focus {outline:0;}

@@ -8,47 +8,54 @@
         // Container for user's total wins.
         // Container for user's total losses.
         // Container for Gem Images
-        // Reset Game button
+        // Reset game button
 
 
     // jQuery
         // var gameInstructions - game instructions text.
 
         // var scoreForComputer - Randomly generated score, should be between 19-120.
-        // var scoreForGem1 - Random generated score, should be between 1-12.
-        // var scoreForGem2 - Random generated score, should be between 1-12.
-        // var scoreForGem3 - Random generated score, should be between 1-12.
-        // var scoreForGem4 - Random generated score, should be between 1-12.
+        // var scoreOptionsForGems - Random generated score, should be between 1-12.
 
-        // var userInitialScore - User's initial score is 0.
-        // var userTotalScore - When user presses a Gem, it's value gets added to the total score.
+        // var counter - User's initial score is 0. When user presses a Gem, it's value gets added to the counter.
         
-        // If 
-            // a user's total score is equal to the computer's score, "You Win!" is displayed in the HTML.
-            // New game begins and 1 is added to the user's total wins (Game cycles back to the start without reloading page).
+        // if 
+            // the counter is equal to the computer's score, "You Win!" is displayed in the HTML.
+            // 1 is added to the user's total wins and new game begins (game cycles back to the start without reloading page).
 
-        // Else
-            // a user's total score is greater than the computer's score, "You Lose!" is displayed in the HTML.
-            // New game begins and 1 is added to the user's total losses (Game cycles back to the start without reloading page).
+        // else if
+            // the counter is greater than the computer's score, "You Lose!" is displayed in the HTML.
+            // 1 is added to the user's total wins and new game begins (game cycles back to the start without reloading page).
 
-        // If 
-            // user presses Reset Game button, page reloads.
+        // When user presses Reset game button, page reloads.
 
 // --------------------------------------------------------------------------------
 // jQuery
 
 // Global Variables
 
-var gameInstructions = "these are the game instructions"
+var backgroundImageSource = "assets/images/PSQuality8/3000px_Treasure_Crop1.jpg";
+
+var gameTitle = "<h1>" + "The Gem Collector" + "</h1>";
+
+var gameInstructions = "You will be given a random number at the start of the game. This is the computer’s score."
+                        + "<br></br>" + 
+                        "Each of the gems below will be assigned a hidden random value. By clicking on a gem, you will add its value to your total score." 
+                        + "<br></br>" + 
+                        "If your total score matches the computer’s score exactly, then you win the game." 
+                        + "<br></br>" + 
+                        "If your total score exceeds the computer’s score, then you lose the game."
+                        + "<br></br>" + 
+                        "Each time a new game starts, the hidden value of each gem will change.";
 
 var scoreForComputer;
 
-// Array that holds the paths to the images
+// Array that holds the paths to the gem images
 var gemImageSource = [4];
-gemImageSource [0] = "https://via.placeholder.com/150";
-gemImageSource [1] = "https://via.placeholder.com/150";
-gemImageSource [2] = "https://via.placeholder.com/150";
-gemImageSource [3] = "https://via.placeholder.com/150";
+gemImageSource [0] = "assets/images/PSQuality8/120px_Gem1.jpg";
+gemImageSource [1] = "assets/images/PSQuality8/120px_Gem2.jpg";
+gemImageSource [2] = "assets/images/PSQuality8/120px_Gem3.jpg";
+gemImageSource [3] = "assets/images/PSQuality8/120px_Gem4.jpg";
 
 // Array that holds the different score options for the gems
 var scoreOptionsForGems = [];
@@ -72,6 +79,10 @@ var newGame = function() {
     $(".imagesForGemsContainer").empty();
 
 
+    // Write game title to container
+    $(".gameTitleContainer").html(gameTitle);
+
+
     // Write game instructions to container
     $(".gameInstructionsContainer").html(gameInstructions);
 
@@ -79,10 +90,21 @@ var newGame = function() {
         // document.getElementsByClassName("gameInstructionsContainer")[0].innerHTML = gameInstructions
 
 
+    // Load Background Image to container
+    var imageForBackground = $("<img>");
+    imageForBackground.addClass("backgroundImage");     // Class assigned for CSS styling
+    imageForBackground.attr("src", backgroundImageSource); 
+    $(".backgroundImageContainer").append(imageForBackground); 
+
+
     // Generate random number for computer score    
     scoreForComputer  =  Math.floor(Math.random() * 120) + 19;     // Score should be between 19-120
     // Write computer score to container 
     $(".computerScoreContainer").html("Computer score: " + scoreForComputer);
+
+
+    // User's total score is written to page (This will be 0 because at the start of the game the counter is 0 (see above))
+    $(".userTotalScoreContainer").html("Your total score: " + counter);
 
 
     // Write user wins to container
