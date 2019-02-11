@@ -7,54 +7,57 @@
 
     <title>Gem Collector Game</title>
 
-    <!--Favicon-->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <!--Meyerweb CSS Reset Link-->
+    <!-- Meyerweb CSS Reset Link -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">    
 
-    <!--Bootstrap link-->
+    <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!--CSS Link-->
+    <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>  
-    <!--Background Image-->
+    <!-- Background Image -->
     <div class="backgroundImageContainer"></div>
 
-    <!--Game Container-->
-    <div class="gameOuterContainer">
+    <!-- Game Container 1 -->
+    <div class="gameContainer1">
 
         <div class="gameTitleContainer"></div>
 
         <div class="gameInstructionsContainer"></div>
 
-        <div class="gameInnerContainer">
+    </div>
 
-            <div class="computerScoreContainer"></div>
+    <!-- Game Container 2 -->
+    <!-- (This must be separate from Game Container 1 so that Game Container 1 and Game Container 2 can have their own different opacity values in CSS) -->
+    <div class="gameContainer2">
 
-            <div class="userTotalScoreContainer"></div>
+        <div class="computerScoreContainer"></div>
 
-            <div class="youWinYouLoseContainer"></div>
-            
-            <div class="userWinContainer"></div>
-            
-            <div class="userLossContainer"></div>
-                               
-            <div class="imagesForGemsContainer"></div>
-            
-            <button class="reloadBrowserButton" onclick="onClickReload()">Click to play again</button>
+        <div class="userTotalScoreContainer"></div>
 
-        </div>
+        <div class="youWinYouLoseContainer"></div>
+        
+        <div class="userWinContainer"></div>
+        
+        <div class="userLossContainer"></div>
+                           
+        <div class="imagesForGemsContainer"></div>
+        
+        <button class="reloadBrowserButton" onclick="onClickReload()">Click to play again</button>
 
     </div>
 
-    <!--jQuery Link-->
+
+    <!-- jQuery Link -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--JavaScript Link-->
+    <!-- JavaScript Link -->
     <script src="assets/javascript/game.js"></script>
     
 </body>
