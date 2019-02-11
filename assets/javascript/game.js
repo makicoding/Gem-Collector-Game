@@ -34,19 +34,19 @@
 
 // Global Variables
 
-var backgroundImageSource = "assets/images/PSQuality8/3000px_Treasure_Crop1.jpg";
+var backgroundImageSource = "assets/images/PSQuality8/3000px_Treasure_Crop1_ColorAdjust1.jpg";
 
 var gameTitle = "<h1>" + "The Gem Collector" + "</h1>";
 
 var gameInstructions = "You will be given a random number at the start of the game. This is the computer’s score."
                         + "<br></br>" + 
-                        "Each of the gems below will be assigned a hidden random value. By clicking on a gem, you will add its value to your total score." 
+                        "Each of the gems below will be assigned a hidden random number. By clicking on a gem, you will add its number to your total score." 
                         + "<br></br>" + 
                         "If your total score matches the computer’s score exactly, then you win the game." 
                         + "<br></br>" + 
                         "If your total score exceeds the computer’s score, then you lose the game."
                         + "<br></br>" + 
-                        "Each time a new game starts, the hidden value of each gem will change.";
+                        "Each time a new game starts, the hidden number of each gem will change.";
 
 var scoreForComputer;
 
