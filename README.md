@@ -1,5 +1,8 @@
 # Gem Collector Game
 
+[Click here to view deployed game](https://makicoding.github.io/Gem-Collector-Game/index.html)
+<br>
+
 ### Game Instructions
 
 You will be given a random number at the start of the game.  This is the computer’s score.
