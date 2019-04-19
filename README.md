@@ -7,7 +7,7 @@
 
 You will be given a random number at the start of the game.  This is the computer’s score.
 
-Each of the gems below will be assigned a hidden random value.  By clicking on a gem, you will add its value to your total score.
+Each of the gems will be assigned a hidden random value. By clicking on a gem, you will add its value to your total score.
 
 If your total score matches the computer’s score exactly, then you win the game.
 
